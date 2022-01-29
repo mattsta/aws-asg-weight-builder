@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "aweight"
+version = "0.1.0"
+description = "Build AWS EC2 ASG instane selection and weights automatically"
+authors = ["Matt Stancliff <matt@genges.com>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.20.46"
+pandas = "^1.4.0"
+loguru = "^0.6.0"
+fire = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+build-weights = "aweight.builder:cmd"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
